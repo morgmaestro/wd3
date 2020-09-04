@@ -1,0 +1,18 @@
+/* font-family: 'Raleway', sans-serif; */
+
+* {
+	background-color: red;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 3em;
+} 
+
+p {
+	font-size: 1em;
+}
