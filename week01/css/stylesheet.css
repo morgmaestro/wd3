@@ -1,13 +1,22 @@
 /* font-family: 'Raleway', sans-serif; */
 
 * {
-	background-color: red;
 	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color: white;
 }
 
 h1 {
 	font-size: 4em;
+	text-align: center;
+	padding: 2vw;
 }
+	
+	.black-text {
+		color: black;
+	}
 
 h2 {
 	font-size: 3em;
@@ -15,4 +24,178 @@ h2 {
 
 p {
 	font-size: 1em;
+	padding-bottom: 2vh;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header {
+	width: 100%;
+	float: left;
+	min-height:100vh;
+	display: inline-block;
+	background-color: red;
+}
+
+nav {
+	display: inline;
+	text-align: center;
+}
+	ul {
+		list-style: none;
+	}
+
+	li a {
+		color: white;
+		text-decoration: none;
+		font-size: 3em;
+	}
+
+#logo {
+	width: 75%;
+	margin: auto;
+	padding: 5vw;
+}
+
+#return {
+	position: fixed;
+	padding: 2vw;
+	height: 10vh;
+	top: 90vh;
+	display: inline-block;
+	width: 100%;
+	background-color: red;
+}
+
+#about {
+	width: 100%;
+	float: left;
+	background-color: black;
+	padding: 5vw;
+}
+
+	#about picture {
+		width: 100%;
+		float: left;
+		padding-bottom: 2vh;
+	}
+
+	#about p {
+		width: 100%;
+		float: left;
+		padding-bottom: 2vh;
+	}
+
+#gallery {
+	width: 100%;
+	float: left;
+	display: inline-block;
+	background-color: white;
+	padding: 5vw;
+}
+
+	#pics {
+		
+	}
+
+		#gallery picture {
+			display: inline-block;
+			margin: auto;
+			width: 100%;
+			padding: 1vw;
+		}
+
+#contact {
+	width: 100%;
+	float: left;
+	display: inline-block;
+	background-color: black;
+	padding-bottom: 15vh;
+}
+
+img {
+	width: 100%;
+}
+
+form {
+	width: 75%;
+	display: block;
+	margin: auto;
+	padding-top: 2vh;
+}
+
+	input {
+		width: 100%;
+		margin-bottom: 1vh;
+		padding: 10px;
+
+	}
+		#message {
+			padding: 10vh;
+			
+		}
+
+	button, input[type=submit] {
+		background-color: red;
+		text-decoration: none;
+		padding: 12px;
+		border: none;
+		display: block;
+		margin: auto;
+
+	}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  	
+  	#logo {
+		width: 50%;
+		margin: auto;
+		padding: 5vw;
+	}
+
+  	#pics {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#bio {
+		width: 100%;
+		float: left;
+		background-color: black;
+		display: block;
+	}
+		#about picture {
+			width: 33%;
+			float: left;
+			padding-right: 2vh;
+
+		}
+
+		#about p {
+			width: 66%;
+			float: left;
+			padding-bottom: 2vh;
+			display: inline;
+		}
+  
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+  	#pics {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	form {
+		width: 50%;
+	}
+  
 }

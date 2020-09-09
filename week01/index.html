@@ -1,46 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Responsive Design/JS Demo</title>
+	<title>Hannah Hillam</title>
 	<link rel="stylesheet" href="css/stylesheet.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script>
+		function toggleGallery() {
+		  var x = document.getElementById("pics");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+	</script>
 </head>
 <body>
 	<header>
 		<h1>hannah hillam</h1>
-		<h2>comicbook artist</h2>
-	</header>
-		<section> 
-			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
-			</picture>
+		<nav>
+			<ul>
+				<li><a href="#about">about</a></li>
+				<li><a href="#gallery">gallery</a></li>
+				<li><a href="#contact">contact</a></li>
+			</ul>
+		</nav>
 
+		<section id="logo">
 			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
-			</picture>
-
-			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
-			</picture>
-			<picture>
-				<img src="" alt="">
+				<img src="img/hillam.png" alt="copyright hannah hillam">
 			</picture>
 		</section>
+
+		<section id="return">
+			<uL>
+				<li><a href="#top">^ top</a></l1>
+			<ul>
+		</section>
+	</header>
+	<section id="about">
+		<h1>about</h1>
+		<section id="bio">
+			<picture>
+				<img src="img/bio.jpg" alt="hannah hillam">
+			</picture>
+			<p>
+				Hannah Hillam is a San Francisco-based artist whose cynaical and surreal comics have gone viral on instagram. Most of her followers are women ages 20-40 who share her awkward spin on life. Her artwork is inspired by her every day life, living with mental illness, and the world around her. One of her most common subjects is an alternate reality where she has become her cat's pet. She credits a moment of success in the art industry when her grandparents started taking her seriously.
+			</p>
+
+		</section>
+	</section>
+	<section id="gallery">
+		<h1 class="black-text">gallery</h1>
+		<p class="black-text">
+			Hillam sums up her style as "Unsettlingly cute. Unnervingly heartwarming." Her work is at both times relatable and surreal. She cites illustrators such as Arthur Rackham, Charles Dana Gibson, NC Wyeth as early inspiration, and follows currently working artists Jillian Tamaki, Yuko Shimizu, Noelle Stevenson, Kate Beaton, James Jean, Shen Comix, Julia Kaye, and Safely Endangered. 
+		</p>
+		<button id="button" onclick="toggleGallery()">Toggle Gallery</button>
+		<section id="pics">
+			<picture>
+				<img src="img/gallery01.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery02.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery03.jpeg" alt="copyright hannah hilliam">
+			</picture>
+
+			<picture>
+				<img src="img/gallery04.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery05.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery06.jpg" alt="copyright hannah hilliam">
+			</picture>
+
+			<picture>
+				<img src="img/gallery07.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery08.jpeg" alt="copyright hannah hilliam">
+			</picture>
+			<picture>
+				<img src="img/gallery09.jpeg" alt="copyright hannah hilliam">
+			</picture>
+		</section>
+	</section>
+
+	<section id="contact">
+		<h1>contact</h1>
+		<form>
+			<label for="name">Name:</label><input type="text" id="name" name="name">
+			<label for="email">Email:</label><input type="text" id="email" name="email">
+			<label for="subject">Subject:</label><input type="text" id="subject" name="subject">
+			<label for="message">Message:</label><input type="text" id="message" name="message">
+			<input type="submit" value="Submit">
+		</form>
+	</section>
 
 </body>
 </html>
