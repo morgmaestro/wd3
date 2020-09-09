@@ -8,78 +8,125 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Week 02</title>
+    <title>Chickens</title>
 
     <style>
     	body {
-    		padding-top: 100px;
+    		padding-top: 200px;
     	}
 
     	nav .navbar-brand img {
     		max-width: 45px;
     	}
 
-    	.bg-primary {
-    		background-color: lightblue;
-    	}
     </style>
   </head>
-  <body>
-  	<header>
-  		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-		  <a class="navbar-brand" href="#">img goes here
+  <body class="bg-light">
+  	<header id="#top">
+  		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		  <a class="navbar-brand" href="#">
+		  		<img src="img/egg.png" alt="egg logo">
 		  </a>
 
 		  <!-- hamburger -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
+		    <span class="navbar-toggler-icon border-0"></span>
 		  </button>
 
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item active"> <!-- active highlights which page -->
-		        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		        <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">About</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Products</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Blog</a>
+		        <a class="nav-link" href="#gallery">Gallery</a>
 		      </li>
 		    </ul>
 		  </div>
 		</nav>
   	</header>
-    <div class="container">
-    	<div class="row">
-    		<div class="col-12 col-md-6 col-lg-3 bg-primary">
-    			<p>row 1, col 1</p>
-    		</div>
 
-    		<div class="col-12 col-md-6 col-lg-3 bg-info">
-    			<p>row 1, col 2</p>
-    		</div>
+  	<main role="main">
+  	<section class="jumbotron bg-light">
+	  	<div class="container" id="about">
+	  		<h1 class="text-center">Chickens</h1>
+			<p class="lead text-muted">Chickens are the coolest birds around, don't you want some of these nuggets around in your yard? Wouldn't it be nice to have a yard!? Chickens come in all sorts of sizes, colors, and feather stylings. They have various waddles and combs, some have more than 4 toes, short legs and long legs. Some like the cold, some are pampered in palaces. Chickens are found in nearly every corner of the world. (I wonder if there are chickens in Antarctica?)</p>
+	  	</div>
+	</section>
 
-    		<div class="col-12 col-md-6 col-lg-3 bg-warning">
-    			<p>row 1, col 3</p>
-    		</div>
+	<section id="gallery" class="jumbotron bg-light" style="padding-top:100px">
+	    <div class="container">
+	    	<h1 class="text-center" style="padding-bottom: 6px">Gallery</h1>
+	    	<div class="row">
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-appenzeller.jpg" class="card-img-top" alt="appenzeller">
+					  <div class="card-body">
+					    <h5 class="card-title">Appenzeller</h5>
+					    <p class="card-text">A Swiss bird with two different varieties. The Spitzhauben is named for a woman's hat and the Barthuhner is named for bearded hens with a rose comb and no crest.</p>
+					  </div>
+					</div>
+	    		</div>
 
-    		<div class="col-12 col-md-6 col-lg-3 bg-success">
-    			<p>row 1, col 4</p>
-    		</div>
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-chantecler.jpg" class="card-img-top" alt="chantecler">
+					  <div class="card-body">
+					    <h5 class="card-title">Chantecler</h5>
+					    <p class="card-text">This practical chicken hails from Canada around the turn of the 20th century. They are a hardy breed with small cushion combs and wattles.</p>
+					  </div>
+					</div>
+	    		</div>
 
-    		<div class="col-12 col-md-6 col-lg-6 bg-danger">
-    			<p>row 1, col 5</p>
-    		</div>
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-houdan.jpg" class="card-img-top" alt="houdan">
+					  <div class="card-body">
+					    <h5 class="card-title">Houdan</h5>
+					    <p class="card-text">These French birds are descended from ancient 5-toed fowl common in the area. They are good for both meat and egg-laying, plus looks! This bird has it all!</p>
+					  </div>
+					</div>
+	    		</div>
 
-    		<div class="col-12 col-md-6 col-lg-6 bg-primary">
-    			<p>row 1, col 6</p>
-    		</div>
-    	</div>
-    </div>
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-nakedneck.jpg" class="card-img-top" alt="nakedneck">
+					  <div class="card-body">
+					    <h5 class="card-title">Naked Neck</h5>
+					    <p class="card-text">Also known as the "Translyvanian Naked Neck", these birds are named for their featherless necks. This makes them easier to pluck if raised for meat, but they also are good egg-layers.</p>
+					  </div>
+					</div>
+	    		</div>
+
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-scotsdumpy.jpg" class="card-img-top" alt="scotsdumpy">
+					  <div class="card-body">
+					    <h5 class="card-title">Scots Dumpy</h5>
+					    <p class="card-text">An ancient Sccotish breed of chicken that dates back 700 years ago. They have short little legs which make them excellent for those who want to keep manicured lawns.</p>
+					  </div>
+					</div>
+	    		</div>
+
+	    		<div class="col-12 col-lg-4">
+					<div class="card border-0">
+					  <img src="img/breed-sultan.jpg" class="card-img-top" alt="sultan">
+					  <div class="card-body">
+					    <h5 class="card-title">Sultan</h5>
+					    <p class="card-text">This cuddly cutie is native to Turkey–their Turkish name is "Serai Taook" which translates to "Fowl of the Sultan's Palace." If you're looking for a unique bird, this one is for you!</p>
+					  </div>
+					</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</section>
+
+    <section class="jumbotron bg-light">
+	  	<div class="container mx-auto" style="width: 200px;">
+	  		<a href="#top"><button type="button" class="btn btn-secondary">Take me to the top!</button></a>
+	  	</div>
+	</section>
+	</main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
