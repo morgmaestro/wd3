@@ -1,0 +1,12 @@
+section.jumobotron {
+	background-size: cover;
+	background-position: center;
+}
+
+.text-light {
+    color: #d0e7ff!important;
+}
+
+.bg-transparent {
+    background-color: rgba(20,20,20,0.2)!important;
+}
