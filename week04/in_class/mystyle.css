@@ -1,0 +1,27 @@
+.alert-danger {
+    color: #4b035d!important;
+    background-color: #ebbef1!important;
+    border-color: #4b035d!important;
+}
+
+.alert {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    border-radius: 0rem;
+} 
+
+.row-cols-md-2 {
+    flex: 0 0 46%;
+}
+
+nav ul {
+    font-size: 3rem;
+    list-style: none;
+    padding: 1em;
+    color: blue;
+}
+
+nav ul li {
+    display: inline-block;
+}
