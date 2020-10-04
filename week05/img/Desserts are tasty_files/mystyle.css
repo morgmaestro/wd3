@@ -1,0 +1,61 @@
+body, .bg-white, {
+    background-color: #fffcfa!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-white {
+    color: #fffcfa!important;
+}c
+
+.text-dark {
+    color: #d1c3fc!important;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: none!important;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.nav-item {
+    color: #fffcfa!important;
+    border-color: #fffcfa!important;
+    border: 0;
+}
+
+.nav-item:hover {
+    color: #9bc4fc!important;
+    text-decoration: underline;
+}
+
+section.jumobotron {
+	background-image: cover;
+    background-position: center;
+}
+
+.fa-stroopwafel {
+    font-size: 3rem;
+}
+
+footer nav ul {
+    font-size: 3rem;
+    list-style: none;
+    color: lightgrey;
+    padding-inline-start: 0px;
+}
+
+/* 
+blue: 9bc4fc
+purple: d1c3fc
+white-peach: fffcfa
