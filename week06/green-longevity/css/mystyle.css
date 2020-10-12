@@ -1,0 +1,163 @@
+body {
+    background-color: #5CDB95!important;
+    line-height: 1.25;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.navbar {
+    background-color:transparent!important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.text-white {
+    color: #edf5e1!important;
+}
+
+.text-dark {
+    color: #05386b!important;
+}
+
+a.text-dark, a.text-dark:focus, a.text-dark:hover {
+    color: #05386b!important;
+}
+
+.alert {
+    position: fixed;
+    height: 5vh;
+	top: 95vh;
+    z-index: 1;
+    width: 100%;
+    background-color: #05386b!important;
+    color: #edf5e1!important;
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: none!important;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 3rem;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-image: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.carousel-image {
+    background-position: center;
+    background-size: cover;
+    height: 95vh;
+}
+
+.js-carousel-pause-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+}
+
+.jumobotron {
+    background-color: none!important;
+    height: 1140px;
+}
+
+    .bg-transparent {
+        background-color:rgba(142, 228, 175, 0.5)!important;
+    }
+
+.fa-stroopwafel {
+    font-size: 3rem;
+}
+
+.card {
+    background-color: transparent!important;
+    border: 0;
+}
+
+.card-body {
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn {
+    font-size: 1rem;
+    border: 2px solid transparent;
+    font-weight: 600;
+    padding: .75rem;
+}
+    .btn-primary {
+        background-color: #05386b!important;
+        border: 2px;
+        border-color: #05386b!important;
+        border-radius: 0;
+    }
+
+        .btn-primary:hover {
+            background-color:rgba(142, 228, 175, 0.7)!important;
+            color: #05386b!important;
+        }
+        
+        /* I wanted to create a border here */
+
+    .btn-secondary {
+        border: 2px;
+        border-radius: 0;
+    }
+
+label {
+    color: #05386b!important;
+}
+
+input {
+    background-color: #edf5e1!important;
+}
+
+small {
+    color: #05386b!important;
+}
+
+footer nav ul {
+    font-size: 3rem;
+    list-style: none;
+    color: #05386b;
+    padding-inline-start: 0px;
+}
+
+.modal-dialog {
+    border-radius: 0;
+}
+/* 
+blue: 05386b
+dark green: 379683
+main green: 5cdb95
+light green: 8ee4af
+white: edf5e1

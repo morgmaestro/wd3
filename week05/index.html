@@ -166,8 +166,8 @@
                     <p class="text-white"><strong>Billing Address</strong></p>
 
                     <div class="form-group">
-                      <label for="billingAddress">Address</label>
-                      <input type="text" class="form-control" id="billingAddress" required>
+                      <label for="billingAddress1">Address</label>
+                      <input type="text" class="form-control" id="billingAddress1" required>
                       <div class="invalid-feedback">A valid address is required.</div>
                     </div>
                     <div class="form-group">
@@ -197,40 +197,43 @@
                     </div>
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" data-toggle="collapse" href="#collapseShipping" required>
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="billingCheck" required>
+                        <label class="form-check-label" for="billingCheck">
                           Shipping address is the same as billing
                         </label>
-                        <div class="collapse show" id="collapseShipping">
-                          <div class="">
-                            <p class="text-white mt-3"><strong>Shipping Address</strong></p>
+                      </div>
+                    </div>
+                      
+                        
+                <p class="text-white mt-3"><strong>Shipping Address</strong></p>
 
-                                <div class="form-group">
-                                  <label for="shippingAddress">Address</label>
-                                  <input type="text" class="form-control" id="shippingAddress" required>
-                                </div>
-                                <div class="form-group">
-                                  <label for="shippingAddress2">Address 2</label>
-                                  <input type="text" class="form-control" id="shippingAddress2" placeholder="Apartment, studio, or floor" required>
-                                </div>
-                                <div class="form-row">
-                                  <div class="form-group col-md-6">
-                                    <label for="shippingCity">City</label>
-                                    <input type="text" class="form-control" id="shippingCity" required>
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                    <label for="shippingState">State</label>
-                                    <select id="shippingState" class="form-control" required>
-                                      <option selected>Choose...</option>
-                                      <option>...</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group col-md-2">
-                                    <label for="shippingZip">Zip</label>
-                                    <input type="text" class="form-control" id="shippingZip" required>
-                                  </div>
-                                </div>
-                          </div>
+                    <div class="form-group">
+                      <label for="shippingAddress1">Address</label>
+                      <input type="text" class="form-control" id="shippingAddress1" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="shippingAddress2">Address 2</label>
+                      <input type="text" class="form-control" id="shippingAddress2" placeholder="Apartment, studio, or floor" required>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="shippingCity">City</label>
+                        <input type="text" class="form-control" id="shippingCity" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="shippingState">State</label>
+                        <select id="shippingState" class="form-control" required>
+                          <option selected>Choose...</option>
+                          <option val='CA'>California</option>
+                          <option val='NY'>New York</option>
+                          <option val='OR'>Oregon</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="shippingZip">Zip</label>
+                        <input type="text" class="form-control" id="shippingZip" required>
+                      </div>
+                
                         </div>
                       </div>
 
@@ -268,15 +271,15 @@
                 
                         <div class="d-block my-3">
                           <div class="custom-control custom-radio">
-                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked value='CC' required>
                             <label class="custom-control-label" for="credit">Credit card</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" value='DC' required>
                             <label class="custom-control-label" for="debit">Debit card</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" aria-valuetext='PP' required>
                             <label class="custom-control-label" for="paypal">PayPal</label>
                           </div>
                         </div>
@@ -349,6 +352,25 @@
     <script src="https://kit.fontawesome.com/eacc33b71e.js" crossorigin="anonymous"></script>
 
     <script>
+      console.log($(this).prop('checked'));
+      $('#billingCheck').click(function(){
+        if ($(this).prop('checked')){
+          $('#shippingAddress1').val($('#billingAddress1').val());
+          $('#shippingAddress2').val($('#billingAddress2').val());
+          $('#shippingCity').val($('#billingCity').val());
+          $('#shippingState').val($('#billingState').val());
+          $('#shippingZip').val($('#billingZip').val());
+        }
+
+        else {
+          $('#shippingAddress1').val('');
+          $('#shippingAddress2').val('');
+          $('#shippingCity').val('');
+          $('#shippingState').val('');
+          $('#shippingZip').val('');
+        }
+      })
+
       let form = document.getElementById('myForm');
       form.addEventListener("submit", function(evt){
         if(form.checkValidity() === false) {
