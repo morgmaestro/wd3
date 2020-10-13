@@ -116,17 +116,9 @@ main {
 }
     .btn-primary {
         background-color: #05386b!important;
-        border: 2px;
         border-color: #05386b!important;
         border-radius: 0;
     }
-
-        .btn-primary:hover {
-            background-color:rgba(142, 228, 175, 0.7)!important;
-            color: #05386b!important;
-        }
-        
-        /* I wanted to create a border here */
 
     .btn-secondary {
         border: 2px;
