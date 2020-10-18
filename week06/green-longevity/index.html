@@ -18,7 +18,7 @@
   <body>
     
     <header id="top">
-        <nav class="navbar navbar-expand-lg py-3 mb-5 fixed-top bg-transparent">
+        <nav class="navbar navbar-expand-lg py-3 mb-5 fixed-top">
             <a class="navbar-brand" href="#"><svg class="d-none d-lg-block" height='50px' width='50px'  fill="#05386b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 22" style="enable-background:new 0 0 24 22;" xml:space="preserve"><title>32 -Fountain- (Solid)</title><desc>Created with Sketch.</desc><path d="M23,16h-7v-2h1c2.8,0,5-2.2,5-5c0-0.6-0.4-1-1-1h-5V5.9c2.3-0.5,4-2.5,4-4.9c0-0.6-0.4-1-1-1H5C4.4,0,4,0.4,4,1  c0,2.4,1.7,4.4,4,4.9V8H3C2.4,8,2,8.4,2,9c0,2.8,2.2,5,5,5h1v2H1c-0.6,0-1,0.4-1,1c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5  C24,16.4,23.6,16,23,16z M14,16h-4v-2h4V16z M14,8h-4V6h4V8z"></path></svg></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><svg height='50px' width='50px'  fill="#05386b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 22" style="enable-background:new 0 0 24 22;" xml:space="preserve"><title>32 -Fountain- (Solid)</title><desc>Created with Sketch.</desc><path d="M23,16h-7v-2h1c2.8,0,5-2.2,5-5c0-0.6-0.4-1-1-1h-5V5.9c2.3-0.5,4-2.5,4-4.9c0-0.6-0.4-1-1-1H5C4.4,0,4,0.4,4,1  c0,2.4,1.7,4.4,4,4.9V8H3C2.4,8,2,8.4,2,9c0,2.8,2.2,5,5,5h1v2H1c-0.6,0-1,0.4-1,1c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5  C24,16.4,23.6,16,23,16z M14,16h-4v-2h4V16z M14,8h-4V6h4V8z"></path></svg></span>
@@ -104,7 +104,8 @@
         <!-- end alert -->
 
         <!-- start jumbotron -->
-        <section id="about" class="jumbotron bg-transparent">
+        <section class="jumbotron bg-transparent" style="position: relative;">
+          <div id="about" class="nav-point"></div>
           <div class="container-fluid">
               
             <h1 class="text-dark display-3 text-center">About</h1>
@@ -119,8 +120,10 @@
       </section>  
       <!-- end jumbotron -->
 
-        <!-- start cards -->
-        <section id="products" class="container my-5">
+        <!-- start PRODUCT CARDS -->
+        
+        <section class="container my-5" style="position: relative;">
+        <div id="products" class="nav-point"></div>
           <div class="row">
             <div class="col">
               <h1 class="text-dark display-3 text-center">Products</h1>
@@ -177,9 +180,10 @@
       </section>
       <!-- end cards -->
 
-      <!-- START THE FEATURETTES -->
+      <!-- start TEAM  -->
 
-      <section id="team" class="container my-5">
+      <section class="container my-5" style="position: relative;">
+        <div id="team" class="nav-point"></div>
         <div class="row">
           <div class="col">
             <h1 class="text-dark display-3 text-center">Team</h1>

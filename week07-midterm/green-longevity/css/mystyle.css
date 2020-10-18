@@ -1,12 +1,12 @@
 body {
-    background-color: #5CDB95!important;
+    background-color: #F8F8F8!important;
     line-height: 1.25;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
 
 .navbar {
-    background-color: #5CDB95!important;
+    background-color: #05386b!important;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .text-white {
-    color: #edf5e1!important;
+    color: #F8F8F8!important;
 }
 
 .text-dark {
@@ -32,7 +32,7 @@ a.text-dark, a.text-dark:focus, a.text-dark:hover {
     z-index: 1;
     width: 100%;
     background-color: #05386b!important;
-    color: #edf5e1!important;
+    color: #F8F8F8!important;
     border: 0;
     border-radius: 0;
 }
@@ -49,30 +49,35 @@ a.text-dark, a.text-dark:focus, a.text-dark:hover {
 
 nav ul li {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.25rem;
     text-align: left;
     font-family: 'Work Sans', sans-serif;
+    color: #F8F8F8!important;
 }
 
-.nav-item:hover {
+.nav-link {
+    color: #F8F8F8!important;
+}
+
+a:hover {
     text-decoration: underline;
-}
-
-main {
-    background-image: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    color: #5CDB95!important;
 }
 
 .nav-point {
     position: absolute;
-    top: -180px;
+    top: -120px;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-point {
+        position: absolute;
+        top: -155px;
+    }
 }
 
 .carousel-image {
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
     height: 95vh;
 }
@@ -90,21 +95,31 @@ main {
     font-size: 2.5rem;
 }
 
-.jumobotron {
-    background-color: none!important;
-    height: 1140px;
+main {
+    background-image: cover;
+    background-position: center top;;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-    .bg-transparent {
-        background-color:rgba(142, 228, 175, 0.5)!important;
-    }
+.jumbotron {
+    background-image: cover;
+    background-position: left;
+}
 
-.fa-stroopwafel {
-    font-size: 3rem;
+@media only screen and (min-width: 768px) {
+    .jumbotron {
+        background-image: cover;
+        background-position: center;
+    }
+}
+
+.bg-white {
+    background-color: #F8F8F8!important;
 }
 
 .card {
-    background-color: transparent!important;
+    background-color: #F8F8F8!important;
     border: 0;
 }
 
@@ -115,7 +130,7 @@ main {
 }
 
 .btn {
-    font-size: 1rem;
+    font-size: 1.25rem;
     border: 2px solid transparent;
     font-weight: 600;
     padding: .75rem;
@@ -123,8 +138,15 @@ main {
     .btn-primary {
         background-color: #05386b!important;
         border-color: #05386b!important;
+        border: 1px;
         border-radius: 0;
+        color: #F8F8F8!important;
     }
+
+        .btn-primary:hover {
+            background-color: #5CDB95!important;
+            color: #05386b!important;
+        }
 
     .btn-secondary {
         border: 2px;
@@ -136,26 +158,38 @@ label {
 }
 
 input {
-    background-color: #edf5e1!important;
+    background-color: #F8F8F8!important;
 }
 
 small {
     color: #05386b!important;
 }
 
+footer {
+    background-color: #05386b!important;
+}
+
 footer nav ul {
     font-size: 3rem;
     list-style: none;
-    color: #05386b;
+    color: #F8F8F8;
     padding-inline-start: 0px;
+    
 }
 
 .modal-dialog {
     border-radius: 0;
 }
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #F8F8F8;
+    border-color: #05386b!important;
+    background-color: #05386b!important;
+}
+
 /* 
 blue: 05386b
 dark green: 379683
 main green: 5cdb95
 light green: 8ee4af
-white: edf5e1
+white: F8F8F8
