@@ -11,21 +11,69 @@
         }
 
         #gradient1 {
-            background-image: linear-gradient(45deg, #fcf1f1, #f9813a);
+            background-image: linear-gradient(135deg, #fcf1f1, #f9813a);
         }
 
         #gradient2 {
             background-image: linear-gradient(to right, #fcf876 10%, #3797a4 25%);
         }
+
+        #gradient3 {
+            background-image: linear-gradient(to right, rgb(233, 168, 93), rgb(49, 201, 201) 35%, rgb(118, 46, 212) 45%, rgb(212, 64, 113) 65%, rgb(19, 209, 51));
+        }
+
+        #gradient4 {
+            background-image: repeating-linear-gradient(to bottom right, rgb(212, 64, 113), rgb(49, 201, 201) 10%, rgb(118, 46, 212) 20%, rgb(212, 64, 113) 30%);
+        }
+
+        #gradient5 {
+            background-image: radial-gradient(circle, rgb(212, 64, 113),rgb(118, 46, 212));
+        }
+
+        #gradient6 {
+            background-image: radial-gradient(circle closest-corner at 10% 30%, rgb(224, 196, 33),rgb(82, 149, 236));
+        }
+
+        #gradient7 {
+            background-image: linear-gradient(to right, hsl(9, 80%, 50%), hsl(150, 80%, 50%) 50%, hsl(290, 80%, 50%));
+        }
+
+        section {
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: hsl(220, 33%, 52%, .6);
+        }
+
+        section img {
+            width: 100%;
+        }
+
+        section h1 {
+            position: absolute;
+            top: 200px;
+            left: 30px;
+        }
     </style>
 </head>
 <body>
-    <div class="gradient" id="gradient1">
-
-    </div>
-
-    <div class="gradient" id="gradient2">
-
-    </div>
+    <div class="gradient" id="gradient1"></div>
+    <div class="gradient" id="gradient2"></div>
+    <div class="gradient" id="gradient3"></div>
+    <div class="gradient" id="gradient4"></div>
+    <div class="gradient" id="gradient5"></div>
+    <div class="gradient" id="gradient6"></div>
+    <div class="gradient" id="gradient7"></div>
+    <section>
+        <img src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg" alt="sky">
+        <div class="overlay"></div>
+        <h1>The sky is beautiful today!</h1>
+    </section>
 </body>
 </html>

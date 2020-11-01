@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations and Transitions</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Elsie', cursive;
+            color: #FFF;
+        }
+
+        body {
+            background-color: rgb(0, 82, 121);
+        }
+
+        .logo img {
+            width: 100%;
+            min-width: 100px;
+            max-width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            position: relative;
+            list-style-type: none;
+            padding: 2.8em;
+            overflow: hidden;
+            background-image: linear-gradient(to bottom, rgb(191, 225, 248)15%, rgb(59, 137, 173), rgb(0, 82, 121)90%);
+        }
+
+        nav li a {
+            position: static;
+            top: 50%;
+            display: inline-block;
+            text-transform: lowercase;
+            text-decoration: none;
+            font-size: 2em;
+            box-shadow: 0.2em 0.2em 0.4em rgba(0,0,0,0);
+            transition: background-color 1500ms, box-shadow 1000ms;
+            margin-right: 0.5em;
+            padding: 0.2em;
+        }
+
+        @media screen and (min-width: 768px) {
+                .logo {
+                    float: right;
+                }
+                
+                nav li a {
+                    float: left;
+                    font-size: 3em;
+                }
+            }
+
+        nav a:hover {
+            background-color:rgb(1, 58, 85, .7);
+            box-shadow: 0.2em 0.2em 0.4em rgba(1, 58, 85, 0.5);
+        }
+
+        nav a:active {
+            background-color:rgb(9, 206, 180);
+        }
+
+        /* Grid of Images */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-gap: 1rem;
+            padding: 1rem;
+            margin: 2rem;
+        }
+            @media screen and (min-width: 480px) {
+                .grid-container {
+                    grid-template-columns: auto auto;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                .grid-container {
+                    grid-template-columns: auto auto auto;
+                }
+            }
+
+        .grid-item {
+            position: relative;
+        }
+
+        .grid-item img {
+            height: auto;
+            width: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(1, 58, 85, .7);
+            opacity: 0;
+            transition: 1000ms ease;
+        }
+    
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .grid-item h1 {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><div class="logo"><img src="img/bubble.png" alt=""></div></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="grid-container">
+            <div class="grid-item item1">
+                <img src="img/bub1.jpg" alt="bub1">
+                <div class="overlay"><h1>Bubbles</h1></div>
+            </div>
+            <div class="grid-item">
+                <img src="img/bub2.jpg" alt="bub2">
+                <div class="overlay"><h1>Bubbles</h1></div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="img/bub3.jpg" alt="bub3">
+                <div class="overlay"><h1>Bubbles</h1></div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="img/bub4.jpg" alt="bub4">
+                <div class="overlay"><h1>Bubbles</h1></div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="img/bub1.jpg" alt="bub5">
+                <div class="overlay"><h1>Bubbles</h1></div>
+                
+            </div>
+            <div class="grid-item">
+                <img src="img/bub1.jpg" alt="bub6">
+                <div class="overlay"><h1>Bubbles</h1></div>
+                
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
