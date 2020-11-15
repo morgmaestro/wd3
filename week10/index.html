@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate the animatables</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            animation-name: bodyColor;
+            animation-timing-function: linear;
+            animation-delay: 4s;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .strip {
+            height: 50vh;
+            width: 100vw;
+            position: absolute;
+            top: -100%;
+            animation-name: moveToBottom;
+            animation-duration: 5s;
+            animation-fill-mode: alternate;
+        }
+
+        #strip1 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 90%);
+            animation-duration: 5s;
+        }
+
+        #strip2 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 80%);
+            animation-duration: 5s;
+            animation-delay: 500ms;
+        }
+
+        #strip3 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 70%);
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        #strip4 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 60%);
+            animation-duration: 5s;
+            animation-delay: 1500ms;
+        }
+
+        #strip5 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 50%);
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+
+        #strip6 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 40%);
+            animation-duration: 5s;
+            animation-delay: 2500ms;
+        }
+
+        #strip7 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 30%);
+            animation-duration: 5s;
+            animation-delay: 3s;
+        }
+
+        #strip8 {
+            bottom: 0;
+            background-color: hsl(0, 0%, 20%);
+            animation-duration: 5s;
+            animation-delay: 3500ms;
+        }
+
+        main {
+            animation: contentAnimate;
+            animation-timing-function: linear;
+            animation-delay: 6s;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+
+        .orb {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(hsl(0, 0%, 80%), hsl(0, 0%, 30%) 50%, hsl(0, 0%, 0%) 80%);
+        }
+
+        .orb:hover {
+            animation: orbAnimate;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bodyColor {
+            from {
+                background-color: hsl(0, 0%, 100%);
+            }
+
+            to {
+                background-color: hsl(0, 0%, 20%);
+            }
+        }
+
+        @keyframes moveToBottom {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 50%;
+            }
+        }
+
+        @keyframes contentAnimate {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes orbAnimate {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="strip" id="strip1"></div>
+    <div class="strip" id="strip2"></div>
+    <div class="strip" id="strip3"></div>
+    <div class="strip" id="strip4"></div>
+    <div class="strip" id="strip5"></div>
+    <div class="strip" id="strip6"></div>
+    <div class="strip" id="strip7"></div>
+    <div class="strip" id="strip8"></div>
+    <div class="strip" id="strip9"></div>
+    <div class="strip" id="strip10"></div>
+
+    <main>
+        <div class="orb"></div>
+    </main>
+
+</body>
+
+</html>
