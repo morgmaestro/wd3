@@ -22,6 +22,7 @@
         div {
             padding: 20px;
             color: white;
+            font-size: 24pt;
         }
 
     </style>
@@ -30,6 +31,20 @@
     <canvas id="Game" width="800" height="600">
         This part needs a newer browser.
     </canvas>
+
+    <div>
+        <p>
+            <span id="cRed" style="color:rgb(255, 0, 0)">red</span> | 
+            <span id="cOrange" style="color:rgb(255, 165, 0)">orange</span> | 
+            <span id="cYellow" style="color:rgb(255, 255, 0)">yellow</span> | 
+            <span id="cGreen" style="color:rgba(0, 128, 0)">green</span> | 
+            <span id="cBlue" style="color:rgb(0, 0, 255)">blue</span> | 
+            <span id="cIndigo" style="color:rgb(75, 0, 130)">indigo</span> | 
+            <span id="cViolet" style="color:rgb(238, 130, 238)">violet</span>
+        </p>
+
+        <p>#: <span id="counter">0</span></p>
+    </div>
 
     <script src="canvas.js"></script>
 </body>
