@@ -7,6 +7,8 @@ let cVelX = 3.4;
 let cVelY = 4.2;
 let cRad = 60;
 
+// thank you jeff reyes for how to change colors (i looked at his hw hope that's OK? i figured that's why we had the discussion at the beginning of the semester..) his counter did not work for me so I figured that one out on my own!!
+
 let cRed = document.getElementById("cRed");
 let cOrange = document.getElementById("cOrange");
 let cYellow = document.getElementById("cYellow");
@@ -53,6 +55,8 @@ function moveCircle() {
 
 draw();
 
+var clicks = 0;
+
 canvas.addEventListener("click", function(event){
 
     let mouseXp = event.pageX - event.target.offsetLeft;
@@ -63,7 +67,8 @@ canvas.addEventListener("click", function(event){
 
     if(distX < cRad && distY < cRad){
         console.log(clicked);
-        counter += 1;
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
         clicked = !clicked;
     }
 });
@@ -137,6 +142,5 @@ function drawViolet() {
 cViolet.addEventListener("click", function(event) {
     drawViolet();
 });
-
 
 // offsetX & offsetY give the point of a click
