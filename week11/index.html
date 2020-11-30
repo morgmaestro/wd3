@@ -33,7 +33,7 @@
     </canvas>
 
     <div>
-        <p>
+        <!-- <p>
             <span id="cRed" style="color:rgb(255, 0, 0)">red</span> | 
             <span id="cOrange" style="color:rgb(255, 165, 0)">orange</span> | 
             <span id="cYellow" style="color:rgb(255, 255, 0)">yellow</span> | 
@@ -41,9 +41,18 @@
             <span id="cBlue" style="color:rgb(0, 0, 255)">blue</span> | 
             <span id="cIndigo" style="color:rgb(75, 0, 130)">indigo</span> | 
             <span id="cViolet" style="color:rgb(238, 130, 238)">violet</span>
-        </p>
+        </p> -->
 
         <p style="text-align:center">#<span id="clicks"></span></p>
+
+        <form action="" method="GET">
+            <label>Red Value</label>
+            <input type="range" min="0" max="255" id="redSlider">
+            <label>Green Value</label>
+            <input type="range" min="0" max="255" id="greenSlider">
+            <label>Blue Value</label>
+            <input type="range" min="0" max="255" id="blueSlider">
+        </form>
 
     </div>
 

@@ -9,17 +9,26 @@ let cRad = 60;
 
 // thank you jeff reyes for how to change colors (i looked at his hw hope that's OK? i figured that's why we had the discussion at the beginning of the semester..) his counter did not work for me so I figured that one out on my own!!
 
-let cRed = document.getElementById("cRed");
-let cOrange = document.getElementById("cOrange");
-let cYellow = document.getElementById("cYellow");
-let cGreen = document.getElementById("cGreen");
-let cBlue = document.getElementById("cBlue");
-let cIndigo = document.getElementById("cIndigo");
-let cViolet = document.getElementById("cViolet");
+// let cRed = document.getElementById("cRed");
+// let cOrange = document.getElementById("cOrange");
+// let cYellow = document.getElementById("cYellow");
+// let cGreen = document.getElementById("cGreen");
+// let cBlue = document.getElementById("cBlue");
+// let cIndigo = document.getElementById("cIndigo");
+// let cViolet = document.getElementById("cViolet");
+
+let rSlider = document.getElementById("redSlider");
+let gSlider = document.getElementById("greenSlider");
+let bSlider = document.getElementById("blueSlider");
 
 let clicked = false;
+var clicks = 0;
+let grow = false;
+let shrink = false;
 
-context.fillStyle = "yellow";
+// context.fillStyle = "yellow";
+
+let cColor = "rgb(255, 200, 0)";
 
 function draw(){
     context.clearRect(0, 0, canvas.width, canvas.height);
@@ -32,8 +41,25 @@ function draw(){
 
 function drawCircle() {
     context.beginPath();
+    context.fillStyle = cColor;
     
-    context.globalAlpha = 0.7;
+    if(grow){
+        cRad += 10;
+    }
+
+    if(shrink) {
+        cRad -= 10;
+    }
+
+    if(cRad*2 >= canvas.height){
+        shrink = true;
+        grow = false;
+    }
+
+    if(cRad <= 60){
+        shrink = false;
+    }
+
     context.ellipse(cPosX, cPosY, cRad, cRad, 0, 0, 2*Math.PI);
     context.fill();
 }
@@ -53,9 +79,12 @@ function moveCircle() {
     // javascript is about 60-70fps (frames per second)
 }
 
-draw();
+let colorChange = function(){
+    console.log("Red: " + rSlider.value + " Green: " + gSlider.value + " Blue: " + bSlider.value);
+    cColor =  "rgb("+rSlider.value + ", "+gSlider.value + ", "+bSlider.value + ")";
+}
 
-var clicks = 0;
+draw();
 
 canvas.addEventListener("click", function(event){
 
@@ -67,80 +96,91 @@ canvas.addEventListener("click", function(event){
 
     if(distX < cRad && distY < cRad){
         console.log(clicked);
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
+
+        if(!clicked){
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+        }
+
         clicked = !clicked;
+
+        grow = !grow;
     }
 });
 
-function drawRed() {
-    context.fillStyle = "rgba(255, 0, 0, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawRed);
-}
+rSlider.addEventListener("change", colorChange);
+gSlider.addEventListener("change", colorChange);
+bSlider.addEventListener("change", colorChange);
 
-cRed.addEventListener("click", function(event) {
-    drawRed();
-});
 
-function drawOrange() {
-    context.fillStyle = "rgba(255, 165, 0, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawOrange);
-}
+// function drawRed() {
+//     context.fillStyle = "rgba(255, 0, 0, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawRed);
+// }
 
-cOrange.addEventListener("click", function(event) {
-    drawOrange();
-});
+// cRed.addEventListener("click", function(event) {
+//     drawRed();
+// });
 
-function drawYellow() {
-    context.fillStyle = "rgba(255, 255, 0, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawYellow);
-}
+// function drawOrange() {
+//     context.fillStyle = "rgba(255, 165, 0, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawOrange);
+// }
 
-cYellow.addEventListener("click", function(event) {
-    drawYellow();
-});
+// cOrange.addEventListener("click", function(event) {
+//     drawOrange();
+// });
 
-function drawGreen() {
-    context.fillStyle = "rgba(0, 128, 0, 0.7)";
-    context.fill();
-    window.requestAnimationFrame(drawGreen);
-}
+// function drawYellow() {
+//     context.fillStyle = "rgba(255, 255, 0, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawYellow);
+// }
 
-cGreen.addEventListener("click", function(event) {
-    drawGreen();
-});
+// cYellow.addEventListener("click", function(event) {
+//     drawYellow();
+// });
 
-function drawBlue() {
-    context.fillStyle = "rgba(0, 0, 255, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawBlue);
-}
+// function drawGreen() {
+//     context.fillStyle = "rgba(0, 128, 0, 0.7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawGreen);
+// }
 
-cBlue.addEventListener("click", function(event) {
-    drawBlue();
-});
+// cGreen.addEventListener("click", function(event) {
+//     drawGreen();
+// });
 
-function drawIndigo() {
-    context.fillStyle = "rgba(75, 0, 130, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawIndigo);
-}
+// function drawBlue() {
+//     context.fillStyle = "rgba(0, 0, 255, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawBlue);
+// }
 
-cIndigo.addEventListener("click", function(event) {
-    drawIndigo();
-});
+// cBlue.addEventListener("click", function(event) {
+//     drawBlue();
+// });
 
-function drawViolet() {
-    context.fillStyle = "rgb(238, 130, 238, .7)";
-    context.fill();
-    window.requestAnimationFrame(drawViolet);
-}
+// function drawIndigo() {
+//     context.fillStyle = "rgba(75, 0, 130, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawIndigo);
+// }
 
-cViolet.addEventListener("click", function(event) {
-    drawViolet();
-});
+// cIndigo.addEventListener("click", function(event) {
+//     drawIndigo();
+// });
+
+// function drawViolet() {
+//     context.fillStyle = "rgb(238, 130, 238, .7)";
+//     context.fill();
+//     window.requestAnimationFrame(drawViolet);
+// }
+
+// cViolet.addEventListener("click", function(event) {
+//     drawViolet();
+// });
 
 // offsetX & offsetY give the point of a click
