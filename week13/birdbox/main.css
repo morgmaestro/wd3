@@ -1,0 +1,250 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.bg-white {
+    background-color: white!important;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+nav ul li {
+    display: inline-block;
+} 
+
+.navbar-brand {
+    font-size: 2.5rem;
+    transition: all 1s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+}
+
+    .navbar-brand:hover {
+        transform: scale(1.1);
+        animation-name: tropical;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+.nav-shopping {
+    display: block;
+    padding: .5rem;
+    padding-left: 0;
+    font-size: 2rem;
+    color: rgb(40, 40, 40);
+    transition: all 1s;
+}
+
+    .nav-shopping:hover {
+        color: rgb(40, 40, 40);
+        transform: scale(1.);
+        animation-name: tropical;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+.nav-link {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    padding: .5rem;
+    border-radius: .1rem;
+    transition: all 1s;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-link:hover {
+        background-color: #0CC4F0;
+    }
+}
+
+.nav-point {
+    position: absolute;
+    top: -120px;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-point {
+        position: absolute;
+        top: -155px;
+    }
+}
+
+.carousel-image {
+    background-position: center bottom;
+    background-size: cover;
+    height: 95vh;
+}
+
+.js-carousel-pause-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carousel-caption {
+    background-color: rgba(148, 148, 148, .2);
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    background-color: #000!important;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    color: #000!important;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    color: #000!important;
+}
+
+.carousel-indicators {
+    font-size: 2.5rem;
+    color: #000!important;
+}
+
+main {
+    background-image: cover;
+    background-position: center top;;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.jumbotron {
+    background-image: cover;
+    background-position: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .jumbotron {
+        background-image: cover;
+        background-position: center;
+    }
+}
+
+.card {
+    background-color: #F8F8F8!important;
+    border: 0;
+}
+
+.card-body {
+    background-color: white!important;
+    padding: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #F04723!important;
+    border: 0;
+}
+
+    .btn-primary:hover {
+        background-color: #0CC4F0!important;
+        font-weight: 700;
+    }
+
+.custom-select {
+    padding-left: .5rem;
+    border-radius: 0;
+    text-align: center;
+}
+
+label {
+    color: #05386b!important;
+}
+
+input {
+    background-color: #F8F8F8!important;
+}
+
+small {
+    color: #05386b!important;
+}
+
+footer {
+    background-color: white!important;
+}
+
+footer nav ul {
+    font-size: 2rem;
+    list-style: none;
+    padding-inline-start: 0px;
+    
+}
+
+footer nav li {
+    color: rgb(40, 40, 40);
+    transition: all 1s;
+}
+
+    footer nav li:hover {
+        color: rgb(40, 40, 40);
+        transform: scale(1.1);
+        animation-name: tropical;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+        @keyframes tropical {
+            0% {color: #F04723;}
+            25% {color: #0CC4F0;}
+            50% {color: #F08B30;}
+            75% {color: #3CF049;}
+            100% {color: #F01868;}
+        }
+
+
+.modal-dialog {
+    border-radius: 0;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #F8F8F8;
+    border-color: #05386b!important;
+    background-color: #05386b!important;
+}
+
+.alert {
+    position: fixed;
+    height: 5vh;
+	top: 95vh;
+    z-index: 1;
+    width: 100%;
+    background-color: #05386b!important;
+    color: #F8F8F8!important;
+    border: 0;
+    border-radius: 0;
+}
+
+
+/* 
+tropical color palette
+orange: F08B30
+green: 3CF049
+coral: F04723
+blue: 0CC4F0
+pink: F01868
+*/
