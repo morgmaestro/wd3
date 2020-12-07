@@ -2,13 +2,18 @@
     font-family: 'Raleway', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
 
 .bg-white {
-    background-color: white!important;
+    background-color: white !important;
 }
 
 .navbar-toggler {
@@ -17,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 
 nav ul li {
     display: inline-block;
-} 
+}
 
 .navbar-brand {
     font-size: 2.5rem;
@@ -27,12 +32,12 @@ nav ul li {
     color: rgb(40, 40, 40);
 }
 
-    .navbar-brand:hover {
-        transform: scale(1.1);
-        animation-name: tropical;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-    }
+.navbar-brand:hover {
+    transform: scale(1.1);
+    animation-name: tropical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
 
 .nav-shopping {
     display: block;
@@ -43,13 +48,13 @@ nav ul li {
     transition: all 1s;
 }
 
-    .nav-shopping:hover {
-        color: rgb(40, 40, 40);
-        transform: scale(1.);
-        animation-name: tropical;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-    }
+.nav-shopping:hover {
+    color: rgb(40, 40, 40);
+    transform: scale(1.);
+    animation-name: tropical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
 
 .nav-link {
     font-size: 1.5rem;
@@ -90,37 +95,39 @@ nav ul li {
 }
 
 .carousel-caption {
-    background-color: rgba(126, 126, 126, 0.5);
+    background-color: #0CC4F0 !important;
     position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #000;
-    text-align: center;
+    color: #fff;
 }
 
 .carousel-indicators li {
-    background-color: #000!important;
+    font-size: 2rem;
+    background-color: rgb(255, 255, 255);
+    transition: all 1s;
 }
 
 .carousel-caption p {
     font-size: 1.5rem;
-    color: #000!important;
+    color: #fff !important;
 }
 
 .carousel-caption h2 {
     font-size: 2.5rem;
-    color: #000!important;
+    color: #fff !important;
 }
 
-main {
-    background-image: cover;
-    background-position: center top;;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.font-awesome {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    transition: all 1s;
+}
+
+.font-awesome:hover {
+    color: rgb(40, 40, 40);
+    transform: scale(1.1);
+    animation-name: tropical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 .jumbotron {
@@ -136,12 +143,11 @@ main {
 }
 
 .card {
-    background-color: #F8F8F8!important;
     border: 0;
 }
 
 .card-body {
-    background-color: white!important;
+    background-color: white !important;
     padding: 0rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -152,14 +158,14 @@ main {
 }
 
 .btn-primary {
-    background-color: #F04723!important;
+    background-color: #F04723 !important;
     border: 0;
 }
 
-    .btn-primary:hover {
-        background-color: #0CC4F0!important;
-        font-weight: 700;
-    }
+.btn-primary:hover {
+    background-color: #0CC4F0 !important;
+    font-weight: 700;
+}
 
 .custom-select {
     padding-left: .5rem;
@@ -167,73 +173,93 @@ main {
     text-align: center;
 }
 
-label {
-    color: #05386b!important;
-}
-
-input {
-    background-color: #F8F8F8!important;
-}
-
-small {
-    color: #05386b!important;
-}
-
 footer {
-    background-color: white!important;
+    background-color: white !important;
 }
 
 footer nav ul {
-    font-size: 2rem;
     list-style: none;
     padding-inline-start: 0px;
-    
 }
 
 footer nav li {
+    font-size: 2rem;
     color: rgb(40, 40, 40);
     transition: all 1s;
 }
 
-    footer nav li:hover {
-        color: rgb(40, 40, 40);
-        transform: scale(1.1);
-        animation-name: tropical;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
+footer nav li:hover {
+    color: rgb(40, 40, 40);
+    transform: scale(1.1);
+    animation-name: tropical;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* accordion */
+
+.btn-link {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #000!important;
+    border: 2px;
+    border-color: #000!important;
+}
+
+    .btn-link:hover {
+        color: #0CC4F0!important;
+        text-decoration: none;
+        font-weight: 500;
     }
 
-        @keyframes tropical {
-            0% {color: #F04723;}
-            25% {color: #0CC4F0;}
-            50% {color: #F08B30;}
-            75% {color: #3CF049;}
-            100% {color: #F01868;}
-        }
+.card-header {
+    background-color: #fff!important;  
+    padding-left: 0;
+}
 
+/* animations  */
+@keyframes tropical {
+    0% {
+        color: #F04723;
+    }
 
-.modal-dialog {
-    border-radius: 0;
+    25% {
+        color: #0CC4F0;
+    }
+
+    50% {
+        color: #F08B30;
+    }
+
+    75% {
+        color: #3CF049;
+    }
+
+    100% {
+        color: #F01868;
+    }
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-    color: #F8F8F8;
-    border-color: #05386b!important;
-    background-color: #05386b!important;
+    border-color: #0CC4F0 !important;
+    background-color: #0CC4F0 !important;
 }
 
 .alert {
     position: fixed;
     height: 5vh;
-	top: 95vh;
+    top: 95vh;
     z-index: 1;
     width: 100%;
-    background-color: #05386b!important;
-    color: #F8F8F8!important;
+    background-color: #05386b !important;
+    color: #F8F8F8 !important;
     border: 0;
     border-radius: 0;
 }
 
+.modal-dialog {
+    border-radius: 0;
+}
 
 /* 
 tropical color palette
