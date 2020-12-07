@@ -86,7 +86,7 @@ nav ul li {
 .carousel-image {
     background-position: center bottom;
     background-size: cover;
-    height: 95vh;
+    height: 85vh;
 }
 
 .js-carousel-pause-col {
