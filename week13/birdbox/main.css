@@ -60,8 +60,8 @@ nav ul li {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    padding: .5rem;
-    border-radius: .1rem;
+    padding: .5rem .75rem;
+    margin-top: .5rem;
     transition: all 1s;
 }
 
@@ -84,8 +84,8 @@ nav ul li {
 }
 
 .carousel-image {
-    background-position: center bottom;
     background-size: cover;
+    background-position: 50% 25%;
     height: 85vh;
 }
 
@@ -167,12 +167,27 @@ nav ul li {
     font-weight: 700;
 }
 
+/* form and modal stuff */
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #0CC4F0 !important;
+    background-color: #0CC4F0 !important;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
 .custom-select {
-    padding-left: .5rem;
+    padding-left: .75rem;
     border-radius: 0;
     text-align: center;
 }
 
+/* footer stuff */
 footer {
     background-color: white !important;
 }
@@ -240,12 +255,7 @@ footer nav li:hover {
     }
 }
 
-.custom-control-input:checked~.custom-control-label::before {
-    border-color: #0CC4F0 !important;
-    background-color: #0CC4F0 !important;
-}
-
-.alert {
+/* .alert {
     position: fixed;
     height: 5vh;
     top: 95vh;
@@ -255,11 +265,7 @@ footer nav li:hover {
     color: #F8F8F8 !important;
     border: 0;
     border-radius: 0;
-}
-
-.modal-dialog {
-    border-radius: 0;
-}
+} */
 
 /* 
 tropical color palette
