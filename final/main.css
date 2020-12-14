@@ -10,10 +10,36 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    color: rgba(0,0,0,.7);
+}
+
+p {
+    color: rgba(0,0,0,.6);
+}
+
+a {
+    color: rgba(0,0,0,.7);
+}
+
+a:hover {
+    color: rgba(0,0,0,.7); 
+}
+
+.display-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;'
+}
+
+.text-muted {
+    color: rgba(0,0,0,.7)!important;
 }
 
 .bg-white {
     background-color: white !important;
+}
+
+.bg-primary {
+    background-color: #0CC4F0!important;
 }
 
 .navbar-toggler {
@@ -29,7 +55,6 @@ nav ul li {
     transition: all 1s;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: rgb(40, 40, 40);
 }
 
 .navbar-brand:hover {
@@ -44,13 +69,12 @@ nav ul li {
     padding: .5rem;
     padding-left: 0;
     margin-top: .5rem;
-    font-size: 1.25rem;
-    color: rgba(0,0,0,.5);
+    font-size: 1.1rem;
+    color: rgba(0,0,0,.7);
     transition: all 1s;
 }
 
 .nav-shopping:hover {
-    color: rgba(0,0,0,.5);
     transform: scale(1.1);
     animation-name: tropical;
     animation-duration: 5s;
@@ -58,7 +82,7 @@ nav ul li {
 }
 
 .nav-link {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     padding: .5rem .75rem;
@@ -72,18 +96,6 @@ nav ul li {
     }
 }
 
-.nav-point {
-    position: absolute;
-    top: -120px;
-}
-
-@media only screen and (min-width: 992px) {
-    .nav-point {
-        position: absolute;
-        top: -155px;
-    }
-}
-
 /* carousel */
 
 .carousel-image {
@@ -92,13 +104,18 @@ nav ul li {
     height: 85vh;
 }
 
+.carousel-image-7050 {
+    background-size: cover;
+    background-position: 70% 50%;
+}
+
 .js-carousel-pause-col {
     padding-left: 0px;
     padding-right: 0px;
 }
 
 .carousel-caption {
-    background-color: #0CC4F0 !important;
+    background-color: #0CC4F0!important;
     position: absolute;
     color: #fff;
 }
@@ -123,34 +140,41 @@ nav ul li {
     color: #fff !important;
 }
 
-.font-awesome-white {
-    font-size: 2rem;
-    color: rgba(255, 255, 255, .75);
-    transition: all 1s;
-}
-
-.font-awesome-white:hover {
-    color: rgba(255, 255, 255, .75);
-    transform: scale(1.1);
-    animation-name: tropical;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+.carousel-control-next, .carousel-control-prev {
+    color: #0CC4F0!important;
+    opacity: 1;
 }
 
 /* cards */
-
 .card {
     border: 1px solid rgba(0,0,0,.5);
     border-radius: 0px;
 }
 
+.card-hover {
+    transition: all 1s;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+}
+
 .card-body {
     background-color: white !important;
-    padding: 0rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+.card-header {
+    background-color: #fff!important;  
+    padding-left: 0;
+}
+
+.card-columns {
+    column-gap: .75rem;
+}
+
+/* buttons  */
 .btn {
     border-radius: 0;
 }
@@ -165,18 +189,29 @@ nav ul li {
     font-weight: 700;
 }
 
-/* form and modal stuff */
-.custom-control-input:checked~.custom-control-label::before {
-    border-color: #0CC4F0 !important;
-    background-color: #0CC4F0 !important;
+.btn-primary:focus {
+    border: 0px;
+    border-color: #F04723!important;
 }
 
+/* form and modal stuff */
 .modal-content {
     border-radius: 0px;
 }
 
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #0CC4F0!important;
+    background-color: #0CC4F0!important;
+}
+
 .form-control {
     border-radius: 0px;
+    border: 1px solid rgba(0,0,0,.5);
+}
+
+.form-control:focus {
+    border: 1px solid #0CC4F0;
+    box-shadow: 0 0 0 0rem;
 }
 
 .custom-select {
@@ -186,11 +221,6 @@ nav ul li {
     border-left: 0px;
     border-radius: 0;
     text-align: center;
-}
-
-.form-control:focus {
-    border: 1px solid #3CF049;
-    box-shadow: 0 0 0 0rem rgba(0,123,255,.25);
 }
 /* accordion */
 
@@ -208,14 +238,10 @@ nav ul li {
         font-weight: 500;
     }
 
-.card-header {
-    background-color: #fff!important;  
-    padding-left: 0;
-}
-
 /* footer stuff */
 footer {
-    background-color: white !important;
+    background-color: white!important;
+    border-top: 1px solid rgba(0,0,0,.4);
 }
 
 footer nav ul {
@@ -223,24 +249,24 @@ footer nav ul {
     padding-inline-start: 0px;
 }
 
-footer nav li {
-    font-size: 2rem;
+footer p {
+    font-size: .9rem;
+    margin-bottom: .5rem;
 }
 
-.font-awesome-black {
-    color: rgba(0,0,0,.5);
+/* animations  */
+.tropical {
+    font-size: 2rem;
     transition: all 1s;
 }
 
-.font-awesome-black:hover {
-    color: rgba(0,0,0,.5);
+.tropical:hover {
     transform: scale(1.1);
     animation-name: tropical;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
-/* animations  */
 @keyframes tropical {
     0% {
         color: #F04723;

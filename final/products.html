@@ -43,7 +43,7 @@
                         <a class="nav-link mr-md-3" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i><span class="counter-display"></span></a>
                     </li>
                 </ul>
             </div>
@@ -54,6 +54,12 @@
 
         <div class="nav-point"></div>
 
+        <div class="row">
+            <div class="col mb-3">
+                <h2>Products</h2>
+            </div>
+        </div>
+
         <div class="card-deck">
 
             <div class="card">
@@ -62,15 +68,17 @@
                     <h5 class="card-title">The Block</h5>
                     <p class="card-text">Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
                 </div>
-                <select class="custom-select mb-3">
-                    <option selected>Choose quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="button" class="btn btn-primary w-100">Add to Cart</button>
+                <form>
+                    <select class="custom-select mb-3">
+                        <option selected>Choose quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="button" class="btn btn-primary w-100 addtocart">Add to Cart</button>
+                </form>
             </div>
 
             <div class="card">
@@ -79,15 +87,17 @@
                     <h5 class="card-title">The Wreath</h5>
                     <p class="card-text">Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
                 </div>
-                <select class="custom-select mb-3">
-                    <option selected>Choose quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="button" class="btn btn-primary w-100">Add to Cart</button>
+                <form>
+                    <select class="custom-select mb-3">
+                        <option selected>Choose quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="button" class="btn btn-primary w-100">Add to Cart</button>
+                </form>
             </div>
 
             <div class="card">
@@ -96,15 +106,17 @@
                     <h5 class="card-title">The Tapestry</h5>
                     <p class="card-text">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
                 </div>
-                <select class="custom-select mb-3">
-                    <option selected>Choose quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <button type="button" class="btn btn-primary w-100">Add to Cart</button>
+                <form>
+                    <select class="custom-select mb-3">
+                        <option selected>Choose quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="button" class="btn btn-primary w-100">Add to Cart</button>
+                </form>
             </div>
         </div>
 
@@ -121,14 +133,42 @@
         </div>
 
     </main>
-    <footer class="mt-5 p-5">
-        <nav class="d-flex justify-content-center">
-            <ul>
-                <li><i class="fab fa-facebook px-1"></i></li>
-                <li><i class="fab fa-instagram px-1"></i></li>
-                <li><i class="fab fa-twitter px-1"></i></li>
-            </ul>
-        </nav>
+
+    <footer class="mt-5 py-5 px-3 border border-top border-bottom-0">
+
+        <div>
+            <div class="row">
+                <div class="col-sm order-md-1">
+                    <h5>Contact Us</h5>
+                    <p><span class="text-muted"><a href="mailto:bird@birdbox.com">bird@birdbox.com</a></span></p>
+
+                    <p><span class="text-muted"><a href="tel:310-555-5555">(310) 555-5555</a></span></p>
+
+                    <p class="text-left"><span class="text-muted"><a href="https://www.google.com/maps?ll=34.179112,-118.40506&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15503197596483243248">12460 Oxnard St, North Hollywood, CA 91606</span></a></p>
+                </div>
+
+                <div class="col-sm order-md-3">
+                    <p class="text-md-right"><span class="text-muted"><a href="products.html">Products</a></span></p>
+
+                    <p class="text-md-right"><span class="text-muted"><a href="contact.html">Contact</a></span></p>
+
+                    <p class="text-md-right"><span class="text-muted"><a href="blog.html">Blog</span></a></p>
+
+                    <p class="text-md-right"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></p>
+
+                </div>
+
+                <div class="col-sm order-md-2">
+                    <nav class="col-sm d-flex justify-content-center">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook px-2 tropical"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram px-2 tropical"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter px-2 tropical"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
