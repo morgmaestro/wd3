@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    // carousel
     $('.carousel').carousel({
         interval: 5000,
         keyboard: false,
@@ -19,9 +19,20 @@ $(document).ready(function () {
         carouselPaused = !carouselPaused;
     });
 
+    // modal
     $("#signUp").modal('show');
 
-    let form = document.getElementById('myForm');
+    $(".addCart").click(function() {
+        let q = parseInt($(this).prev(".quantity").val());
+        let currentQ = parseInt($("#cartCount").text());
+        console.log(currentQ);
+        if (!isNaN(currentQ)){
+            q += currentQ;
+        }
+        $("#cartCount").text(q);
+    });
+
+    let form = document.getElementById('modalForm');
     form.addEventListener("submit", function (evt) {
         if (form.checkValidity() === false) {
             evt.preventDefault();
@@ -33,8 +44,8 @@ $(document).ready(function () {
 
 });
 
-console.log($(this).prop('checked'));
 $('#billingCheck').click(function () {
+    console.log($(this).prop('checked'));
     if ($(this).prop('checked')) {
         $('#shippingAddress1').val($('#billingAddress1').val());
         $('#shippingAddress2').val($('#billingAddress2').val());
@@ -48,20 +59,4 @@ $('#billingCheck').click(function () {
         $('#shippingState').val('');
         $('#shippingZip').val('');
     }
-})
-
-let form = document.getElementById('myForm');
-form.addEventListener("submit", function (evt) {
-    if (form.checkValidity() === false) {
-        evt.preventDefault();
-        evt.stopPropagation();
-    }
-
-    form.classList.add('was-validated');
 });
-
-let counterDisplayElem = document.querySelector('.counter-display');
-let counterPlusElem = document.querySelector('.counter-plus');
-
-// counter
-
