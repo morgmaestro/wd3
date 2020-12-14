@@ -93,7 +93,10 @@ nav ul li {
 
 @media only screen and (min-width: 992px) {
     .nav-link:hover {
-        background-color: #3CF049;
+        font-weight: 500;
+        color: #fff!important;
+        background-color: #0CC4F0;
+
     }
 }
 
@@ -181,8 +184,9 @@ nav ul li {
 }
 
 .btn-primary {
-    background-color: #F04723 !important;
+    background-color: #F08B30 !important;
     border: 0;
+    font-weight: 700;
 }
 
 .btn-primary:hover {
@@ -192,7 +196,6 @@ nav ul li {
 
 .btn-primary:focus {
     border: 0px;
-    border-color: #F04723!important;
 }
 
 /* form and modal stuff */
