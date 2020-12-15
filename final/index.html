@@ -33,17 +33,17 @@
             </button>
             <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item mr-md-3">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item mr-md-3">
-                        <a class="nav-link" href="faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item mr-md-3">
-                        <a class="nav-link" href="about.html">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link mr-md-3" href="products.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <li class="nav-item">
+                        <a class="nav-link mr-md-3" href="about.html">About</a>
+                    </li>
+                        <a class="nav-link mr-md-3" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i><span id="cartCount" class="ml-1"></span></a>
                     </li>
                 </ul>
             </div>
@@ -95,11 +95,11 @@
         </div>
 
         <main class="container">
-
+        
+        <!-- start featurette -->
         <div class="row featurette my-5">
             <div class="col-lg-7 order-lg-2">
-              <h2 class="featurette-heading">The bird's votes are in! <span class="text-muted">Unanimous happiness caused by Birdbox products!</span></h2>
-              <hr class="pt-3">
+              <h2 class="featurette-heading pb-3">The bird's votes are in! <span class="text-muted">Unanimous happiness caused by Birdbox products!</span></h2>
               <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
               <p class="lead">Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
               <p class="lead">Fusce dapibus, tellus ac cursus commodo. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -110,6 +110,10 @@
             </div>
         </div>
 
+
+        <h2 class="mt-5 mb-3">Featured Products</h2>
+
+        <!-- start product cards -->
         <div class="card-deck">
             <div class="card">
                 <a href="products.html#block"><img src="img/block-1.jpg" class="card-img-top" alt="..."></a>
@@ -226,6 +230,17 @@
                     </select>
                     <button type="button" class="btn btn-primary w-100 addCart">Add to Cart</button>
                 </form>
+            </div>
+        </div>
+
+        <!-- start map -->
+        <h2 class="mt-5 mb-3">Visit Us!</h2>
+
+        <div class="row">
+            <div class="col mt-0">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.7185889189577!2d-118.40724838439309!3d34.179111880571575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29708c4d101f3%3A0xd7266c131512ccf0!2sBird%20Box!5e0!3m2!1sen!2sus!4v1607455645698!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </div>
 
