@@ -40,10 +40,11 @@
                     <li class="nav-item">
                         <a class="nav-link mr-md-3" href="about.html">About</a>
                     </li>
-                        <a class="nav-link mr-md-3" href="faq.html">FAQ</a>
+                    <a class="nav-link mr-md-3" href="faq.html">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i><span id="cartCount" class="ml-1"></span></a>
+                        <a class="nav-shopping" href="cart.html"><i class="fas fa-shopping-cart"></i><span
+                                id="cartCount" class="ml-1"></span></a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +68,7 @@
                             <!-- START FORM -->
 
                             <form method="POST" action="success.php" enctype="multipart/form-data"
-                                class="needs-validation" id="myForm" novalidate>
+                                class="needs-validation" id="validate" novalidate>
                                 <h3 class="mt-5 mb-3">Personal Info</h3>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -247,7 +248,9 @@
 
                     <p><span class="text-muted"><a href="tel:310-555-5555">(310) 555-5555</a></span></p>
 
-                    <p class="text-left"><span class="text-muted"><a href="https://www.google.com/maps?ll=34.179112,-118.40506&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15503197596483243248">12460 Oxnard St, North Hollywood, CA 91606</span></a></p>
+                    <p class="text-left"><span class="text-muted"><a
+                                href="https://www.google.com/maps?ll=34.179112,-118.40506&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15503197596483243248">12460
+                                Oxnard St, North Hollywood, CA 91606</span></a></p>
                 </div>
 
                 <div class="col-sm order-md-3">
@@ -293,6 +296,37 @@
 
     <!-- my script -->
     <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function () { // form validation
+            let form = document.getElementById('validate');
+            form.addEventListener("submit", function (evt) {
+                if (form.checkValidity() === false) {
+                    evt.preventDefault();
+                    evt.stopPropagation();
+                }
+
+                form.classList.add('was-validated');
+            });
+
+            $('#billingCheck').click(function () {
+                console.log($(this).prop('checked'));
+                if ($(this).prop('checked')) {
+                    $('#shippingAddress1').val($('#billingAddress1').val());
+                    $('#shippingAddress2').val($('#billingAddress2').val());
+                    $('#shippingCity').val($('#billingCity').val());
+                    $('#shippingState').val($('#billingState').val());
+                    $('#shippingZip').val($('#billingZip').val());
+                } else {
+                    $('#shippingAddress1').val('');
+                    $('#shippingAddress2').val('');
+                    $('#shippingCity').val('');
+                    $('#shippingState').val('');
+                    $('#shippingZip').val('');
+                }
+            });
+        });
+    </script>
 
 </body>
 
